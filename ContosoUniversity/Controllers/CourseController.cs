@@ -17,6 +17,11 @@ namespace ContosoUniversity.Controllers
         private SchoolContext db = new SchoolContext();
 
         // GET: Course
+        /// <summary>
+        /// Get Course
+        /// </summary>
+        /// <param name="SelectedDepartment"></param>
+        /// <returns></returns>
         public ActionResult Index(int? SelectedDepartment)
         {
             var departments = db.Departments.OrderBy(q => q.Name).ToList();
